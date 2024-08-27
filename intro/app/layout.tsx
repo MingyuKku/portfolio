@@ -1,5 +1,8 @@
 import { Metadata, NextPage } from 'next';
-import React from 'react'
+import React from 'react';
+import ClientLayout from '@/components/common/Client-layout';
+import Viewport from '@/components/common/Viewport';
+import '@/styles/globals.css'
 
 
 export const metadata: Metadata = {
@@ -12,6 +15,8 @@ const RootLayout = ({ children }: React.PropsWithChildren<{}>) => {
     return (
         <html lang='en'>
             <body>
+                <ClientLayout />
+                <Viewport />
                 { children }
             </body>
         </html>
