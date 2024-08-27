@@ -1,6 +1,6 @@
-import { IOptions, RecursivePartial } from "@tsparticles/engine";
+import { IOptions, ISourceOptions, RecursivePartial, ZIndex } from "@tsparticles/engine";
 
-export const space: RecursivePartial<IOptions> = {
+export const space: ISourceOptions = {
     name: 'space',
     autoPlay: true,
     detectRetina: true,
@@ -110,16 +110,6 @@ export const space: RecursivePartial<IOptions> = {
                 max: 2.5,
                 min: 0.5,
             },
-            // animation: {
-            //     enable: true,
-            //     speed: {
-            //         max: 5,
-            //         min: 1,
-            //     },
-            //     sync: true,
-            //     mode: 'auto',
-            //     startValue: 'random'
-            // },
         },
         zIndex: {
             value: 2,
@@ -127,16 +117,166 @@ export const space: RecursivePartial<IOptions> = {
             // sizeRate: 1,
             // velocityRate: 1
         },
-        // collisions: {
-        //     enable: true,
-        //     absorb: {
-        //         speed: 2,
-        //     },
-        //     overlap: { // 파티클끼리 겹치게 할것인지 설정
-        //         enable: false,
-        //         retries: 0
-        //     }
-        // },
     },
+    // emitters: [
+    //     {
+    //         autoPlay: true,
+    //         fill: true,
+    //         life: {
+    //             // wait: false,
+    //             count: 1,
+    //             duration: 10,
+    //         },
+    //         rate: {
+    //             quantity: 1,
+    //             delay: 10,
+    //         },
+    //         direction: 'left',
+    //         particles: {
+    //             shape: {
+    //                 type: 'images',
+    //                 options: {
+    //                     images: [
+    //                         {
+    //                             src: '/images/zzangu.png',
+    //                             width: 237,
+    //                             height: 227
+    //                         },
+    //                         // {
+    //                         //     src: '/images/whitey.png',
+    //                         //     width: 237,
+    //                         //     height: 227
+    //                         // },
+                            
+    //                     ]
+    //                 }
+    //             },
+    //             size: {
+    //                 value: 40,
+    //             },
+    //             number: {
+    //                 value: 1,
+    //             },
+    //             move: {
+    //                 speed: 10,
+    //                 outModes: {
+    //                     default: 'out',
+    //                     bottom: 'out',
+    //                     left: 'out',
+    //                     right: 'out',
+    //                     top: 'out',
+    //                 },
+    //             },
+    //             opacity: {
+    //                 value: 1,
+    //                 animation: {
+    //                     enable: false,
+    //                 }
+    //             },
+    //             rotate: {
+    //                 value: {
+    //                     max: 360,
+    //                     min: 0,
+    //                 },
+    //                 animation: {
+    //                     enable: true,
+    //                     speed: 5,
+    //                     sync: true,
+    //                 },
+    //             },
+    //             zIndex: {
+    //                 value: 2,
+    //             }
+    //         },
+    //         position: {
+    //             x: -5, // 방출기의 X 좌표 (가로 위치, 0~100 사이의 비율)입니다.
+    //             y: 55,
+    //         }
+    //     },
+    //     {
+    //         autoPlay: true,
+    //         fill: true,
+    //         life: {
+    //             count: 1,
+    //             duration: 10,
+    //         },
+    //         rate: {
+    //             quantity: 1,
+    //             delay: 10,
+    //         },
+    //         direction: 'left',
+    //         size: {
+    //             mode: 'percent',
+    //             width: 50, // 발사되는 영역의 크기
+    //             height: 50,
+    //         },
+    //         particles: {
+    //             shape: {
+    //                 type: 'images',
+    //                 options: {
+    //                     images: [
+    //                         // {
+    //                         //     src: '/images/zzangu.png',
+    //                         //     width: 237,
+    //                         //     height: 227
+    //                         // },
+    //                         {
+    //                             src: '/images/whitey.png',
+    //                             width: 237,
+    //                             height: 227
+    //                         },
+                            
+    //                     ]
+    //                 }
+    //             },
+    //             size: {
+    //                 value: 40,
+    //             },
+    //             number: {
+    //                 value: 1,
+    //             },
+    //             move: {
+    //                 speed: {
+    //                     max: 8,
+    //                     min: 7
+    //                 },
+    //                 outModes: {
+    //                     default: 'out',
+    //                     bottom: 'out',
+    //                     left: 'out',
+    //                     right: 'out',
+    //                     top: 'out',
+    //                 },
+    //             },
+    //             opacity: {
+    //                 value: 1,
+    //                 animation: {
+    //                     enable: false,
+    //                 }
+    //             },
+    //             rotate: {
+    //                 value: {
+    //                     max: 360,
+    //                     min: 0,
+    //                 },
+    //                 animation: {
+    //                     enable: true,
+    //                     speed: {
+    //                         max: 5,
+    //                         min: 2,
+    //                     },
+    //                     sync: true,
+    //                 },
+    //             },
+    //             zIndex: {
+    //                 value: 2,
+    //             }
+    //         },
+    //         position: {
+    //             x: -5, // 방출기의 X 좌표 (가로 위치, 0~100 사이의 비율)입니다.
+    //             y: 50,
+    //         }
+    //     }
+    // ]
 }
 

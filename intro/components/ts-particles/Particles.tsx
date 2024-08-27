@@ -5,15 +5,16 @@ import React from 'react';
 import Particles, { initParticlesEngine } from '@tsparticles/react';
 import { ISourceOptions } from '@tsparticles/engine';
 import { loadFull } from "tsparticles";
-import { space } from './options/space';
+
 
 
 interface Props {
+    option: ISourceOptions;
     className?: string;
     setIsLoadParticle?: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const LoadParticles: React.FC<Props> = ({ className, setIsLoadParticle }) => {
+const LoadParticles: React.FC<Props> = ({ option, className, setIsLoadParticle }) => {
 
     const [ init, setInit ] = React.useState<boolean>(false);
 
@@ -40,7 +41,7 @@ const LoadParticles: React.FC<Props> = ({ className, setIsLoadParticle }) => {
         return (
             <Particles
                 id="tsparticles-shape"
-                options={ space }
+                options={ option }
                 className={`${ className ?? '' }`}
             />
         );
